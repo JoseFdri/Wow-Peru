@@ -1,0 +1,5 @@
+-- \r\n parrafo x2 = dobleparrafo y espacio
+SET @TEXT_ID := 64646;
+REPLACE INTO `npc_text` (`ID`, `text0_0`) VALUES
+(@TEXT_ID, '$N  %t  |cffff0000OTransfiguracion|r   desde\r\n te permite cambiar la apariencia de tus items sin cambiar sus estadisticas.\r\nItems usados para la transfiguracion dejaran de ser reembolsables, comerciables y se ligaran a ti.\r\nAl actualizar un menu actualizara el precio y su vista.\r\n\r\nNo todo se puede transfigurar entre si.\r\nExisten restricciones pero no estan limitadas a:\r\nSolo armaduras y armas pueden ser transfiguradas\r\nArmas de fuego,Arcos y Ballestas pueden transfigurarse entre si\r\nCañas de pescar no pueden transfigurarse\r\nDebes poder equipar los dos Items utilizados en el proceso.\r\n\r\nTransfiguraciones permaneceran en tus Items mientras los poseas.\r\nSi intentas poner el Item en tu banco de hermandad o enviarlo por correo a alguien mas, la transfiguracion se pierde.\r\n\r\nTambien puedes quitarte las transfiguraciones gratis en el transfigurador.'),
+
