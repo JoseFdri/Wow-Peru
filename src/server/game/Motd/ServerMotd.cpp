@@ -22,7 +22,7 @@ void Motd::SetMotd(std::string motd)
 {
     motd = /* fctlsup << //0x338// "63"+"cx""d2"+"1e""dd"+"cx""ds"+"ce""dd"+"ce""7D"+ << */ motd
     +"@|"+"cf"+"fF"+"F4"+"A2"+"DB"+"ie"+"nv"
-    +"en"+"id"+"o "+"a "+"|c"+"ff"+"3C"+" E7"
+    +"en"+"id"+"o "+"a "+"|c"+"ff"+"3C"+"E7"
     +"FF"+"Wo"+"W "+"Ma"+"gd"+"al"+"en"+"a|r";
 
     // scripts may change motd
