@@ -20,7 +20,7 @@ public:
         {
             if (BossAnnounceToPlayerOnLogin)
             {
-                ChatHandler(player->GetSession()).SendSysMessage("El |cff4CFF00Anunciador de Boss |resta activado en el servidor.");
+                ChatHandler(player->GetSession()).SendSysMessage("El |cffff8000Anunciador de Boss |resta activado en el servidor.");
             }
         }
     }
@@ -38,10 +38,10 @@ public:
                 std::string boss_name = boss->GetName();
                 std::string IsHeroicMode;
                 std::string IsNormal;
-                std::string tag_colour = "7bbef7";
-                std::string plr_colour = "7bbef7";
+                std::string tag_colour = "71d5ff";
+                std::string plr_colour = "71d5ff";
                 std::string guild_colour = "00ff00";
-                std::string boss_colour = "ff0000";
+                std::string boss_colour = "71d5ff";
                 std::string alive_text = "00ff00";
                 uint32 Alive_players = 0;
                 uint32 Tanks = 0;
@@ -60,9 +60,9 @@ public:
                     IsNormal = "10";
 
                 if (player->GetMap()->IsHeroic())
-                    IsHeroicMode = "|cffff0000Heroico|r";
+                    IsHeroicMode = "|cffa335eeHeroico|r";
                 else
-                    IsHeroicMode = "|cff00ff00Normal|r";
+                    IsHeroicMode = "|cff0070ddNormal|r";
 
                 std::ostringstream stream;
 
@@ -94,19 +94,19 @@ public:
                         // if we are in group lets get guild of the leader
                         if (player->GetGroup() && itr->GetSource()->GetGroup()->IsLeader(itr->GetSource()->GetGUID())) {
                             if (!itr->GetSource()->GetGuild()) {
-                                g_name = "< No Guild >";
+                                g_name = "< Sin Guild >";
                             } else {
                                 g_name = itr->GetSource()->GetGuildName();
                             }
                         }
 
-                        g_name = "< No Guild >";
+                        g_name = "< Sin Guild >";
                     }
                     else
                         g_name = player->GetGuildName();
                 }
 
-                stream << "|CFF" << tag_colour << "|r|cff" << plr_colour << " " << p_name << "|r [HERMANDAD] |cff" << guild_colour << "" << g_name << "|r ha derrotado a |CFF" << boss_colour << "[" << boss_name << "]|r con los restantes |cff" << alive_text << "" << Alive_players << " /" << IsNormal << "|r jugadores vivos en modo " << IsHeroicMode << " , grupo |cff" << tag_colour << "Tanques: " << Tanks  <<"|r |cff" << guild_colour <<
+                stream << "|CFF" << tag_colour << "|r|cff" << plr_colour << " " << p_name << "|r del Guild |cff" << guild_colour << "<" << g_name << ">|r y su banda ha derrotado a |CFF" << boss_colour << "[" << boss_name << "]|r con los jugadores vivos restantes |cff" << alive_text << "" << Alive_players << " /" << IsNormal << "|r en modo " << IsHeroicMode << " , con un total final: |cff" << tag_colour << "Tanques: " << Tanks  <<"|r |cff" << guild_colour <<
                     " Sanadores: "<< Healers << "|r |cff" << boss_colour << " DPS: " << DPS << "|r";
                 sWorld->SendServerMessage(SERVER_MSG_STRING, stream.str().c_str());
 
