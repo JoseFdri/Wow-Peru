@@ -134,7 +134,7 @@ public:
 
     void GetMainMenu(Player* player, Creature* creature)
     {
-        AddGossipItemFor(player, GOSSIP_ICON_INTERACT_1, "|TInterface/ICONS/INV_Misc_Book_11:40:40:-18|tComo funciona?", GOSSIP_SENDER_MAIN, VIS_GOSSIP_WHO_ACTION);
+        AddGossipItemFor(player, GOSSIP_ICON_INTERACT_1, "|TInterface/ICONS/INV_Misc_Book_11:40:40:-18|t¿Como funciona?", GOSSIP_SENDER_MAIN, VIS_GOSSIP_WHO_ACTION);
 		AddGossipItemFor(player, GOSSIP_ICON_INTERACT_1, "|TInterface/PaperDoll/UI-PaperDoll-Slot-MainHand:40:40:-18|tMano-principal", GOSSIP_SENDER_MAIN, VIS_GOSSIP_MAIN_HAND_ACTION);
         AddGossipItemFor(player, GOSSIP_ICON_INTERACT_1, "|TInterface/PaperDoll/UI-PaperDoll-Slot-SecondaryHand:40:40:-18|tMano-izquierda", GOSSIP_SENDER_MAIN, VIS_GOSSIP_OFF_HAND_ACTION);
         AddGossipItemFor(player, GOSSIP_ICON_INTERACT_1, "|TInterface/PaperDollInfoFrame/UI-GearManager-Undo:40:40:-18|tTodavia", GOSSIP_SENDER_MAIN, VIS_GOSSIP_CLOSE_ACTION);
@@ -160,7 +160,7 @@ public:
 
 			case VIS_GOSSIP_WHO_ACTION:
                 player->PlayerTalkClass->SendGossipMenu(VIS_GOSSIP_WHAT_ACTION, creature->GetGUID());
-				AddGossipItemFor(player, GOSSIP_ICON_INTERACT_1, "|TInterface/ICONS/Ability_Spy:30:30:-18:0|tAtras..", EQUIPMENT_SLOT_START, 0);
+				AddGossipItemFor(player, GOSSIP_ICON_INTERACT_1, "|TInterface/ICONS/Ability_Spy:30:30:-18:0|tAtras..", GOSSIP_SENDER_MAIN, EQUIPMENT_SLOT_START); //atras?
                 return true;
 
 			case VIS_GOSSIP_MAIN_HAND_ACTION:
