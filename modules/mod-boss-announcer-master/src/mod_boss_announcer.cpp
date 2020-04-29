@@ -43,6 +43,8 @@ public:
                 std::string guild_colour = "00ff00";
                 std::string boss_colour = "71d5ff";
                 std::string alive_text = "00ff00";
+				std::string alive_tank = "c69b6d"; //tanke color
+				std::string alive_dps = "ff0000"; //dps color
                 uint32 Alive_players = 0;
                 uint32 Tanks = 0;
                 uint32 Healers = 0;
@@ -106,8 +108,8 @@ public:
                         g_name = player->GetGuildName();
                 }
 
-                stream << "|CFF" << tag_colour << "|r|cff" << plr_colour << " " << p_name << "|r del Guild |cff" << guild_colour << "<" << g_name << ">|r y su banda ha derrotado a |CFF" << boss_colour << "[" << boss_name << "]|r con los jugadores vivos restantes |cff" << alive_text << "" << Alive_players << " /" << IsNormal << "|r en modo " << IsHeroicMode << " , con un total final: |cff" << tag_colour << "Tanques: " << Tanks  <<"|r |cff" << guild_colour <<
-                    " Sanadores: "<< Healers << "|r |cff" << boss_colour << " DPS: " << DPS << "|r";
+                stream << "|CFF" << tag_colour << "|r|cff" << plr_colour << " " << p_name << "|r del Guild |cff" << guild_colour << "<" << g_name << ">|r y su banda ha derrotado a |CFF" << boss_colour << "[" << boss_name << "]|r con los jugadores vivos restantes |cff" << alive_text << "" << Alive_players << " /" << IsNormal << "|r en modo " << IsHeroicMode << " , con un total final: |cff" << alive_tank << "Tanques: " << Tanks  <<"|r |cff" << guild_colour <<
+                    " Sanadores: "<< Healers << "|r |cff" << alive_dps << " DPS: " << DPS << "|r";
                 sWorld->SendServerMessage(SERVER_MSG_STRING, stream.str().c_str());
 
 
