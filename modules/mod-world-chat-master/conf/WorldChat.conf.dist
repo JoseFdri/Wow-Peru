@@ -27,7 +27,7 @@ World_Chat.CrossFactions = false
 #                     False	- (Disabled)
 #
 
-World_Chat.Announce = false
+World_Chat.Announce = true
 
 #
 #    World_Chat.OnLogin.State
