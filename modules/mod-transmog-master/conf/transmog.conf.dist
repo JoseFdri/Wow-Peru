@@ -28,7 +28,7 @@
 Transmogrification.EnableTransmogInfo = 1
 Transmogrification.TransmogNpcText = 601083
 
-Transmogrification.Allowed = ""
+Transmogrification.Allowed = "1168 32336 31336"
 Transmogrification.NotAllowed = ""
 
 #
@@ -146,7 +146,7 @@ Transmogrification.AllowCommon = 0
 Transmogrification.AllowUncommon = 1
 Transmogrification.AllowRare = 1
 Transmogrification.AllowEpic = 1
-Transmogrification.AllowLegendary = 0
+Transmogrification.AllowLegendary = 1
 Transmogrification.AllowArtifact = 0
 Transmogrification.AllowHeirloom = 1
 
