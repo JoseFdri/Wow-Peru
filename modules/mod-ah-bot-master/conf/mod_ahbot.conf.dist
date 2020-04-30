@@ -43,12 +43,12 @@
 
 AuctionHouseBot.DEBUG = 0
 AuctionHouseBot.DEBUG_FILTERS = 0
-AuctionHouseBot.EnableSeller = 0
-AuctionHouseBot.EnableBuyer = 0
+AuctionHouseBot.EnableSeller = 1
+AuctionHouseBot.EnableBuyer = 1
 AuctionHouseBot.UseBuyPriceForSeller = 0
 AuctionHouseBot.UseBuyPriceForBuyer = 0
-AuctionHouseBot.Account = 0
-AuctionHouseBot.GUID = 0
+AuctionHouseBot.Account = 65278
+AuctionHouseBot.GUID = 271019
 AuctionHouseBot.ItemsPerCycle = 200
 
 ###############################################################################
@@ -136,8 +136,8 @@ AuctionHouseBot.VendorItems = 0
 AuctionHouseBot.VendorTradeGoods = 0
 AuctionHouseBot.LootItems = 1
 AuctionHouseBot.LootTradeGoods = 1
-AuctionHouseBot.OtherItems = 0
-AuctionHouseBot.OtherTradeGoods = 0
+AuctionHouseBot.OtherItems = 1
+AuctionHouseBot.OtherTradeGoods = 1
 AuctionHouseBot.No_Bind = 1
 AuctionHouseBot.Bind_When_Picked_Up = 0
 AuctionHouseBot.Bind_When_Equipped = 1
