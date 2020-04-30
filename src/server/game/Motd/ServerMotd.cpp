@@ -29,7 +29,12 @@ void Motd::SetMotd(std::string motd)
     +"gu"+"ra"+"ci"+"on"+"|r"+"|c"+"ff"+"ff"
     +"ff"+"00"+" e"+"st"+"a "+"ac"+"ti"+"va"
     +"da"+" e"+"n "+"el"+" s"+"er"+"vi"+"do"
-    +"r."+"|r";
+    +"r."+"|r"+"@|"+"cf"+"ff"+"ff"+"f0"+"0E"
+    +"l|r"+"|c"+"ff"+"ff"+"80"+"00"+" C"+"ro"
+    +"ss"+"fa"+"cc"+"io"+"n."+"BG"+"|r"+"|c"
+    +"ff"+"ff"+"ff"+"00"+" e"+"st"+"a "+"ac"
+    +"ti"+"va"+"da"+" e"+"n "+"el"+" s"+"er"
+    +"vi"+"do"+"r."+"|r";
 
     // scripts may change motd
     sScriptMgr->OnMotdChange(motd);
