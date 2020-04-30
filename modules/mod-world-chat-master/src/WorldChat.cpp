@@ -23,7 +23,7 @@ float ver = 1.1f;
 /* Colors */
 std::string WORLD_CHAT_ALLIANCE_BLUE = "|cff3399FF";
 std::string WORLD_CHAT_HORDE_RED = "|cffCC0000";
-std::string WORLD_CHAT_WHITE = "|cffFFFFFF";
+std::string WORLD_CHAT_WHITE = "|cffFFC0C0";
 std::string WORLD_CHAT_GREEN = "|cff00CC00";
 std::string WORLD_CHAT_RED = "|cffFF0000";
 std::string WORLD_CHAT_BLUE = "|cff6666FF";
@@ -56,7 +56,7 @@ std::string world_chat_GM_RANKS[4] =
 };
 
 /* BLIZZARD CHAT ICON FOR GM'S */
-std::string world_chat_GMIcon = "|TINTERFACE/CHATFRAME/UI-CHATICON-BLIZZ:13:13:0:-1|t";
+std::string world_chat_GMIcon = "|TINTERFACE/CHATFRAME/UI-CHATICON-BLIZZ:15|t";
 
 /* COLORED TEXT FOR CURRENT FACTION || NOT FOR GMS */
 std::string world_chat_TeamIcon[2] =
@@ -288,7 +288,7 @@ public:
                 if (player->HasFlag(PLAYER_FLAGS, PLAYER_FLAGS_DEVELOPER))
                     snprintf(message, 1024, "[Mundo][%sDEV|r][%s%s|r]: %s%s|r", world_chat_ClassColor[5].c_str(), world_chat_ClassColor[player->getClass() - 1].c_str(), player->GetName().c_str(), WORLD_CHAT_WHITE.c_str(), msg);
                 else
-                    snprintf(message, 1024, "[Mundo][%s][%s%s|r]: %s%s|r", world_chat_GMIcon.c_str(), world_chat_ClassColor[player->getClass() - 1].c_str(), player->GetName().c_str(), WORLD_CHAT_WHITE.c_str(), msg);
+                    snprintf(message, 1024, "[Mundo] %s [%s%s|r]: %s%s|r", world_chat_GMIcon.c_str(), world_chat_ClassColor[player->getClass() - 1].c_str(), player->GetName().c_str(), WORLD_CHAT_WHITE.c_str(), msg);
                 ChatHandler(target->GetSession()).PSendSysMessage("%s",message);
             }
         }
