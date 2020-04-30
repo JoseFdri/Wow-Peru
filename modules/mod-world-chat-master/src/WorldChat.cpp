@@ -61,8 +61,8 @@ std::string world_chat_GMIcon = "|TINTERFACE/CHATFRAME/UI-CHATICON-BLIZZ:15|t";
 /* COLORED TEXT FOR CURRENT FACTION || NOT FOR GMS */
 std::string world_chat_TeamIcon[2] =
 {
-    "|cff3399FFAlliance|r",
-    "|cffCC0000Horde|r"
+    "|TInterface\\pvpframe\\pvp-currency-alliance:17|t",
+    "|TInterface\\pvpframe\\pvp-currency-horde:17|t"
 };
 
 class WorldChat_Config : public WorldScript
@@ -153,7 +153,7 @@ public:
                     else if (player->HasFlag(PLAYER_FLAGS, PLAYER_FLAGS_DEVELOPER))
                         snprintf(message, 1024, "[Mundo][%sDEV|r][%s%s|r]: %s%s|r", world_chat_ClassColor[5].c_str(), world_chat_ClassColor[player->getClass() - 1].c_str(), player->GetName().c_str(), WORLD_CHAT_WHITE.c_str(), msg);
                     else
-                        snprintf(message, 1024, "[Mundo][%s][%s%s|r]: %s%s|r", world_chat_TeamIcon[player->GetTeamId()].c_str(), world_chat_ClassColor[player->getClass() - 1].c_str(), player->GetName().c_str(), WORLD_CHAT_WHITE.c_str(), msg);
+                        snprintf(message, 1024, "[Mundo] %s [%s%s|r]: %s%s|r", world_chat_TeamIcon[player->GetTeamId()].c_str(), world_chat_ClassColor[player->getClass() - 1].c_str(), player->GetName().c_str(), WORLD_CHAT_WHITE.c_str(), msg);
                     ChatHandler(target->GetSession()).PSendSysMessage("%s", message);
                 }
                 else
@@ -166,7 +166,7 @@ public:
                         else if (player->HasFlag(PLAYER_FLAGS, PLAYER_FLAGS_DEVELOPER))
                             snprintf(message, 1024, "[Mundo][%sDEV|r][%s%s|r]: %s%s|r", world_chat_ClassColor[5].c_str(), world_chat_ClassColor[player->getClass() - 1].c_str(), player->GetName().c_str(), WORLD_CHAT_WHITE.c_str(), msg);
                         else
-                            snprintf(message, 1024, "[Mundo][%s][%s%s|r]: %s%s|r", world_chat_TeamIcon[player->GetTeamId()].c_str(), world_chat_ClassColor[player->getClass() - 1].c_str(), player->GetName().c_str(), WORLD_CHAT_WHITE.c_str(), msg);
+                            snprintf(message, 1024, "[Mundo] %s [%s%s|r]: %s%s|r", world_chat_TeamIcon[player->GetTeamId()].c_str(), world_chat_ClassColor[player->getClass() - 1].c_str(), player->GetName().c_str(), WORLD_CHAT_WHITE.c_str(), msg);
                         ChatHandler(target->GetSession()).PSendSysMessage("%s", message);
                     }
                     else if (target->IsGameMaster()) {
@@ -176,7 +176,7 @@ public:
                         else if (player->HasFlag(PLAYER_FLAGS, PLAYER_FLAGS_DEVELOPER))
                             snprintf(message, 1024, "[Mundo][%sDEV|r][%s%s|r]: %s%s|r", world_chat_ClassColor[5].c_str(), world_chat_ClassColor[player->getClass() - 1].c_str(), player->GetName().c_str(), WORLD_CHAT_WHITE.c_str(), msg);
                         else
-                            snprintf(message, 1024, "[Mundo][%s][%s%s|r]: %s%s|r", world_chat_TeamIcon[player->GetTeamId()].c_str(), world_chat_ClassColor[player->getClass() - 1].c_str(), player->GetName().c_str(), WORLD_CHAT_WHITE.c_str(), msg);
+                            snprintf(message, 1024, "[Mundo] %s [%s%s|r]: %s%s|r", world_chat_TeamIcon[player->GetTeamId()].c_str(), world_chat_ClassColor[player->getClass() - 1].c_str(), player->GetName().c_str(), WORLD_CHAT_WHITE.c_str(), msg);
                         ChatHandler(target->GetSession()).PSendSysMessage("%s", message);
                     }
                 }

@@ -18,7 +18,7 @@ World_Chat.Enable = true
 #                     True	- (Enabled)
 #
 
-World_Chat.CrossFactions = false
+World_Chat.CrossFactions = true
 
 #
 #    World_Chat.Announce

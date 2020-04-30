@@ -24,9 +24,9 @@ void Motd::SetMotd(std::string motd)
     +"@|"+"cf"+"fF"+"F4"+"A2"+"DB"+"ie"+"nv"
     +"en"+"id"+"o "+"a "+"|c"+"ff"+"3C"+"E7"
     +"FF"+"Wo"+"W "+"Ma"+"gd"+"al"+"en"+"a|r"
-    +"\r\n"+"|c"+"ff"+"ff"+"ff"+"00"+"La"+"|r"
-    +"cf"+"ff"+"f8"+"00"+"0 "+"Tr"+"an"+"sf"
-    +"ig"+"ur"+"ac"+"io"+"n|r"+"|c"+"ff"+"ff"
+    +"@|"+"cf"+"ff"+"ff"+"f0"+"0L"+"a|r"+"|c"
+    +"ff"+"ff"+"80"+"00"+" T"+"ra"+"ns"+"fi"
+    +"gu"+"ra"+"ci"+"on"+"|r"+"|c"+"ff"+"ff"
     +"ff"+"00"+" e"+"st"+"a "+"ac"+"ti"+"va"
     +"da"+" e"+"n "+"el"+" s"+"er"+"vi"+"do"
     +"r."+"|r";
