@@ -46,6 +46,22 @@ std::string world_chat_ClassColor[11] =
     "|cffFF7D0A", // DRUID
 };
 
+/* Class Icons */
+std::string world_chat_ClassIcons[11] =
+{
+    "|TInterface\\icons\\INV_Sword_27.png:15|t", // WARRIOR
+    "|TInterface\\icons\\INV_Hammer_01:15|t", // PALADIN
+    "|TInterface\\icons\\INV_Weapon_Bow_07:15|t", // HUNTER
+    "|TInterface\\icons\\INV_ThrowingKnife_04:15|t", // ROGUE
+    "|TInterface\\icons\\INV_Staff_30:15|t", // PRIEST
+    "|TInterface\\icons\\Spell_Deathknight_ClassIcon:15|t", // DEATHKNIGHT
+    "|TInterface\\icons\\Spell_Nature_BloodLust:15|t", // SHAMAN
+    "|TInterface\\icons\\INV_Staff_13:15|t", // MAGE
+    "|TInterface\\icons\\Spell_Nature_FaerieFire:15|t", // WARLOCK
+    "", // ADDED IN MOP FOR MONK - NOT USED
+    "|TInterface\\icons\\Ability_Druid_Maul:15|t", // DRUID
+};
+
 /* Ranks */
 std::string world_chat_GM_RANKS[4] =
 {
@@ -153,7 +169,7 @@ public:
                     else if (player->HasFlag(PLAYER_FLAGS, PLAYER_FLAGS_DEVELOPER))
                         snprintf(message, 1024, "[Mundo][%sDEV|r][%s%s|r]: %s%s|r", world_chat_ClassColor[5].c_str(), world_chat_ClassColor[player->getClass() - 1].c_str(), player->GetName().c_str(), WORLD_CHAT_WHITE.c_str(), msg);
                     else
-                        snprintf(message, 1024, "[Mundo] %s [%s%s|r]: %s%s|r", world_chat_TeamIcon[player->GetTeamId()].c_str(), world_chat_ClassColor[player->getClass() - 1].c_str(), player->GetName().c_str(), WORLD_CHAT_WHITE.c_str(), msg);
+                        snprintf(message, 1024, "[Mundo] %s %s[%s%s|r]: %s%s|r", world_chat_TeamIcon[player->GetTeamId()].c_str(), world_chat_ClassIcons[player->getClass() - 1].c_str(), world_chat_ClassColor[player->getClass() - 1].c_str(), player->GetName().c_str(), WORLD_CHAT_WHITE.c_str(), msg);
                     ChatHandler(target->GetSession()).PSendSysMessage("%s", message);
                 }
                 else
