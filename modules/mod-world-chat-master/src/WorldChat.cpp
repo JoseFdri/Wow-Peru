@@ -71,6 +71,9 @@ std::string world_chat_GM_RANKS[4] =
     "ADMIN",
 };
 
+/* ICON FOR DEV'S */
+std::string world_chat_DEVIcon = "|TInterface\\icons\\Trade_Engineering:17|t";
+
 /* BLIZZARD CHAT ICON FOR GM'S */
 std::string world_chat_GMIcon = "|TINTERFACE/CHATFRAME/UI-CHATICON-BLIZZ:15|t";
 
@@ -167,7 +170,7 @@ public:
                         snprintf(message, 1024, "[Mundo][%s][%s%s|r]: %s%s|r", world_chat_GMIcon.c_str(), world_chat_ClassColor[player->getClass() - 1].c_str(), player->GetName().c_str(), WORLD_CHAT_WHITE.c_str(), msg);
                     }
                     else if (player->HasFlag(PLAYER_FLAGS, PLAYER_FLAGS_DEVELOPER))
-                        snprintf(message, 1024, "[Mundo][%sDEV|r][%s%s|r]: %s%s|r", world_chat_ClassColor[5].c_str(), world_chat_ClassColor[player->getClass() - 1].c_str(), player->GetName().c_str(), WORLD_CHAT_WHITE.c_str(), msg);
+                        snprintf(message, 1024, "[MAGDALENA]%s%sDEV|r<%s%s|r>: %s%s|r", world_chat_DEVIcon.c_str(), world_chat_ClassColor[5].c_str(), world_chat_ClassColor[player->getClass() - 1].c_str(), player->GetName().c_str(), WORLD_CHAT_WHITE.c_str(), msg);
                     else
                         snprintf(message, 1024, "[Mundo] %s %s[%s%s|r]: %s%s|r", world_chat_TeamIcon[player->GetTeamId()].c_str(), world_chat_ClassIcons[player->getClass() - 1].c_str(), world_chat_ClassColor[player->getClass() - 1].c_str(), player->GetName().c_str(), WORLD_CHAT_WHITE.c_str(), msg);
                     ChatHandler(target->GetSession()).PSendSysMessage("%s", message);
