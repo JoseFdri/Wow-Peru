@@ -20,22 +20,6 @@ namespace
 
 void Motd::SetMotd(std::string motd)
 {
-    motd = /* fctlsup << //0x338// "63"+"cx""d2"+"1e""dd"+"cx""ds"+"ce""dd"+"ce""7D"+ << */ motd
-    +"@|"+"cf"+"fF"+"F4"+"A2"+"DB"+"ie"+"nv"
-    +"en"+"id"+"o "+"a "+"|c"+"ff"+"3C"+"E7"
-    +"FF"+"Wo"+"W "+"Ma"+"gd"+"al"+"en"+"a|r"
-    +"@|"+"cf"+"ff"+"ff"+"f0"+"0L"+"a|r"+"|c"
-    +"ff"+"ff"+"80"+"00"+" T"+"ra"+"ns"+"fi"
-    +"gu"+"ra"+"ci"+"on"+"|r"+"|c"+"ff"+"ff"
-    +"ff"+"00"+" e"+"st"+"a "+"ac"+"ti"+"va"
-    +"da"+" e"+"n "+"el"+" s"+"er"+"vi"+"do"
-    +"r."+"|r"+"@|"+"cf"+"ff"+"ff"+"f0"+"0E"
-    +"l|r"+"|c"+"ff"+"ff"+"80"+"00"+" C"+"ro"
-    +"ss"+"fa"+"cc"+"io"+"n."+"BG"+"|r"+"|c"
-    +"ff"+"ff"+"ff"+"00"+" e"+"st"+"a "+"ac"
-    +"ti"+"va"+"da"+" e"+"n "+"el"+" s"+"er"
-    +"vi"+"do"+"r."+"|r";
-
     // scripts may change motd
     sScriptMgr->OnMotdChange(motd);
 
