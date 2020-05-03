@@ -8,7 +8,9 @@ services:
       context: .
       dockerfile: ./docker/database/Dockerfile
     networks:
-      - ac-network
+      ac-network:
+        aliases:
+          - ac-database.wowperuserver.com
     ports:
       - ${DB_EXTERNAL_PORT:-3306}:3306
     environment:
@@ -69,3 +71,4 @@ volumes:
   ac-database:
 networks:
   ac-network:
+    external: true
